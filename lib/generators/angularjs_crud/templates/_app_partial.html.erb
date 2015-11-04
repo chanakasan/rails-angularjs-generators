@@ -1,0 +1,36 @@
+<div id="<%= file_name.pluralize %>_app" ng-app="<%= file_name.pluralize %>App" ng-controller="MainCtrl">
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <div class="clearfix">
+                <h2 class="lead pull-left"><%= class_name.pluralize %></h2>
+                <button class="btn btn-primary btn-sm pull-right" ng-click="new()"><span class="glyphicon glyphicon-plus"></span> New</button>
+            </div>
+
+            <br><br>
+            <p ng-show="list.length == 0">No <%= file_name.pluralize %> yet.</p>
+            <table class="table table-condensed table-hover table-bordered table-striped" ng-show="list.length > 0">
+                <tr>
+                    <th>Name</th>
+                    <th>Date created</th>
+                    <th>Actions</th>
+                </tr>
+                <tr ng-repeat="<%= file_name %> in list | orderBy: '-created_at'">
+                    <td>{{<%= file_name %>.name}}</td>
+                    <td>{{<%= file_name %>.created_at | date}}</td>
+                    <td>
+                        <a href="#" ng-click="show(<%= file_name %>)" class="btn btn-default btn-trans btn-link btn-xs"><span class="glyphicon glyphicon-eye-open"></span> Show</a>
+                        <a href="#" ng-click="edit(<%= file_name %>)" class="btn btn-default btn-trans btn-link btn-xs"><span class="glyphicon glyphicon-pencil"></span> Edit</a>
+                        <a href="#" ng-click="delete(<%= file_name %>)" class="btn btn-danger btn-trans btn-link btn-xs"><span class="glyphicon glyphicon-trash"></span> Delete</a>
+                    </td>
+                </tr>
+            </table>
+
+            <!-- templates -->
+            <%%= angular_inline_template('<%= file_name.pluralize %>/templates/tmpl_form.html') %>
+            <%%= angular_inline_template('<%= file_name.pluralize %>/templates/tmpl_new.html') %>
+            <%%= angular_inline_template('<%= file_name.pluralize %>/templates/tmpl_edit.html') %>
+            <%%= angular_inline_template('<%= file_name.pluralize %>/templates/tmpl_show.html') %>
+            <%%= angular_inline_template('<%= file_name.pluralize %>/templates/tmpl_delete.html') %>
+        </div>
+    </div>
+</div>

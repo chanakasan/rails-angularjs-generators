@@ -1,0 +1,9 @@
+Description:
+    Generates an angular app for doing basic crud operations.
+    Pass the model name, either CamelCased or under_scored. The angular app
+    name is retrieved as a pluralized version of the model name.
+
+    This generates an angular app in app/assets/javascripts/src/<app-name>/main.js
+
+Example:
+    `rails generate angularjs_crud Article`

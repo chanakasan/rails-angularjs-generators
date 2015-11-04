@@ -1,0 +1,12 @@
+<div class="modal-header">
+  <h3 class="modal-title"><strong>New <%= file_name %></strong></h3>
+</div>
+
+<div class="modal-body">
+  <<%= file_name %>-form <%= file_name %>="<%= file_name %>"></<%= file_name %>-form>
+</div>
+
+<div class="modal-footer">
+  <button type="submit" class="btn btn-primary" ng-click="save(<%= file_name %>)">Save</button>
+  <button class="btn btn-default" ng-click="dismiss()">Cancel</button>
+</div>
