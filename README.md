@@ -1,4 +1,4 @@
-## [WIP] Angularjs Crud Generator for Rails
+## Angularjs Crud Generator for Rails
 
 Generates a fully working angularjs crud app for a model.
 
