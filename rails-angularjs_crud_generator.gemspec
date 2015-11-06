@@ -7,7 +7,7 @@ Gem::Specification.new do |s|
   s.description = 'Generates a fully working angularjs app for basic crud operations of a model.'
   s.author      = 'Chanaka Sandaruwan'
   s.email       = 'chanakasan@gmail.com'
-  s.files       = Dir['lib/**/*.rb']
+  s.files       = Dir['**/*']
   s.require_paths = ['lib']
   s.homepage    = 'https://github.com/chanakasan/rails-angularjs_crud_generator'
   s.license     = 'Apache License, Version 2.0'
